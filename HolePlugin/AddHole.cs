@@ -103,9 +103,9 @@ namespace HolePlugin
 
                     FamilyInstance hole = arDoc.Create.NewFamilyInstance(pointHole1, familySymbol, wall1, level, StructuralType.NonStructural);
                     Parameter width1 = hole.LookupParameter("Ширина");
-                    Parameter heidht1 = hole.LookupParameter("Высота");
+                    Parameter height1 = hole.LookupParameter("Высота");
                     width1.Set(p.Diameter);
-                    width1.Set(p.Diameter);
+                    height1.Set(p.Diameter);
                 }
             }
             foreach(Duct d in ducts)
@@ -133,9 +133,9 @@ namespace HolePlugin
                     
                     FamilyInstance hole = arDoc.Create.NewFamilyInstance(pointHole, familySymbol, wall, level, StructuralType.NonStructural);
                     Parameter width = hole.LookupParameter("Ширина");
-                    Parameter heidht = hole.LookupParameter("Высота");
+                    Parameter height = hole.LookupParameter("Высота");
                     width.Set(d.Diameter);
-                    width.Set(d.Diameter);
+                    height.Set(d.Diameter);
                 }
             }
             transaction.Commit();
